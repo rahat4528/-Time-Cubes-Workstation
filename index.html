@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIME CUBES</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Hidden extraction video -->
+    <video
+      id="source-video"
+      muted
+      playsinline
+      preload="auto"
+      style="display: none; width: 1px; height: 1px;"
+    ></video>
+
+    <!-- Initial loading indicator -->
+    <div id="loading" class="loading">LOADING</div>
+
+    <!-- Minimal Gallery HUD -->
+    <header class="gallery-hud">
+      <div class="hud-brand">
+        <h1 class="hud-title">TIME CUBES</h1>
+        <p class="hud-sub">TEMPORAL VOXEL INSTALLATION &bull; 13,824 CUBELETS</p>
+      </div>
+      <button id="about-btn" class="hud-btn" aria-label="About this artwork">ABOUT</button>
+    </header>
+
+    <!-- Frosted-glass About Modal -->
+    <div id="about-modal" class="about-modal hidden" role="dialog" aria-modal="true">
+      <div class="about-card">
+        <div class="about-header">
+          <h2>TIME CUBES</h2>
+          <button id="about-close" class="modal-close" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="about-content">
+          <p class="lead">
+            An experimental digital sculpture transforming video footage into a 3D volumetric Rubik-inspired grid, where <strong>depth represents time</strong>.
+          </p>
+          <div class="axis-grid">
+            <div class="axis-item"><strong>X</strong> Video Width</div>
+            <div class="axis-item"><strong>Y</strong> Video Height</div>
+            <div class="axis-item"><strong>Z</strong> Elapsed Time</div>
+          </div>
+          <ul class="guide-list">
+            <li><strong>The Present:</strong> Grab the luminous white-bordered slice and drag through Z to scrub time directly.</li>
+            <li><strong>The Past:</strong> Viewed frames remain as an ethereal holographic motion blur trail (&ge; 4% visibility).</li>
+            <li><strong>The Future:</strong> Dense, solid, sharp block of unexplored temporal data.</li>
+            <li><strong>Navigation:</strong> Drag background to orbit camera. Scroll/pinch to zoom. Idle mode features ambient drift.</li>
+            <li><strong>Secondary Twist:</strong> Right-click any cubelet to trigger a reversible Rubik layer rotation.</li>
+          </ul>
+        </div>
+        <div class="about-footer">
+          <span>Three.js WebGL2 &bull; GLSL 3.0 &bull; Data3DTexture</span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
